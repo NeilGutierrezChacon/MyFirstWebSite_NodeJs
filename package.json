@@ -1,0 +1,29 @@
+{
+  "name": "web_Pag_With_NodeJs",
+  "version": "1.0.0",
+  "description": "Primera pagina web usando node.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src",
+    "dev": "nodemon src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NeilGutierrezChacon/web_Pag_With_NodeJs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NeilGutierrezChacon/web_Pag_With_NodeJs/issues"
+  },
+  "homepage": "https://github.com/NeilGutierrezChacon/web_Pag_With_NodeJs#readme",
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
