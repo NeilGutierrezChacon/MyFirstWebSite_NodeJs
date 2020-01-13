@@ -1,27 +1,23 @@
 const express = require('express');
-
-const app = express();
-
+const morgan = require('morgan');
 const path = require('path');
-
-
-const indexRoute = require('./routes/index');
+const app = express();
 
 //settings
 app.set('port',3000);
-app.engine('html',require('ejs').renderFile);
-app.set('view engine','ejs');
 app.set('views', path.join(__dirname ,'views') );
+app.set('view engine','ejs');
+
 
 //moddlewares
-
+app.use(morgan('dev'));
 
 //routes
 
-app.use(indexRoute);
+app.use(require('./routes'));
 
 //static files
-
+app.use(express.static(path.join(__dirname, 'public')));
 
 //listening the server
 app.listen(app.get('port'),()=>{
